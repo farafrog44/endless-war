@@ -13269,8 +13269,8 @@ help_responses = {
 	weapon_id_watercolors: "**Watercolors** are a paint tool for sale at Based Hardware. It does a set 4000 influence per shot. It has a captcha length of 3, a miss chance of 10% and a .1% chance for a crit, which zeros out the whole district regardless of owner.",
 	weapon_id_thinnerbomb: "**Thinner bombs** are a paint tool for sale at Based Hardware. It has a capping modifier of 0.15 and a spray cost mod of 2. It has a captcha length of 4, a miss chance of 10% and a 10% chance for a crit, which does 2x influence. When you cap with a thinner bomb, it is used up, and you have to buy more. When decapping, damage is multiplied by 10.",
         
-	weapon_id_hoe: "**The Hoe** is a farming tool for sale at The Ooze Gardens Farms. It can be equipped by both juvies and gangsters to give a 1.5 modifier of slime gain on a !reap command.",
-	weapon_id_pitchfork: "**The Pitchfork** is a farming tool for sale at The Ooze Gardens Farms. It can be equipped by both juvies and gangsters to multiply your crops on a !reap command by 2.",
+	weapon_id_hoe: "**The Hoe** is a farming tool for sale at The Ooze Gardens Farms. It can be equipped by juvies to give a 1.5 modifier of slime gain on a !reap command.",
+	weapon_id_pitchfork: "**The Pitchfork** is a farming tool for sale at The Ooze Gardens Farms. It can be equipped by juvies to multiply your crops on a !reap command by 2.",
 	weapon_id_pickaxe: "**The Pickaxe** is a mining tool acquired via mining. Equipping the pickaxe as a gangster gives you double and a 1.5x chance of unearthing slime poudrins whilst mining.",
 	weapon_id_fishingrod: "**The Fishingrod** is a fishing tool acquired via smelting. The fishing rod when equipped doubles your slimegain from a !reel command.",
 	# "otp":"If you find that you have a role with 'OTP' in the name, don't be alarmed. This just means that you're outside a safe place, such as your apartment, or your gang base / juvie's row. It's essentially a signal to other players that you're actively participating in the game.",
