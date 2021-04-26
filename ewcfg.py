@@ -9732,9 +9732,8 @@ smelting_recipe_list = [
 			'magnet'
 		],
 		ingredients={
-			item_id_tincan: 2,  # metal dust
-			item_id_slimepoudrin: 5,  # lifeforce
-			item_id_string: 1,  # Scarf/tether
+			item_id_tincan: 1,  # metal dust
+			item_id_slimepoudrin: 2,  # lifeforce
 		},
 		products=["ferroslimeoid"]
 	)
