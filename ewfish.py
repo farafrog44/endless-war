@@ -979,7 +979,7 @@ async def barter(cmd):
        
         #if ghost barters in ez, break
 	if user_data.life_state == ewcfg.life_state_corpse:
-		response = 'Captain Albert Alexander hits his table with his glass and shouts "Nay laddy, you can fool me once but not twice! I dont do deals with spirits, get out of my sight!"'
+		response = 'Captain Albert Alexander hits the table with his glass and shouts "Nay laddy, you can fool me once but not twice! I dont do deals with spirits, get out of my sight!"'
 		return await ewutils.send_message(cmd.client, cmd.message.channel, ewutils.formatMessage(cmd.message.author, response))	
 	
 	elif item_sought:
@@ -1230,7 +1230,7 @@ async def barter_all(cmd):
 
 	#if ghost barters in ez, break
 	if user_data.life_state == ewcfg.life_state_corpse: 
-		response = 'Captain Albert Alexander hits his table with his glass and shouts "Nay laddy, you can fool me once but not twice! I dont do deals with spirits, get out of my sight!"'
+		response = 'Captain Albert Alexander hits the table with his glass and shouts "Nay laddy, you can fool me once but not twice! I dont do deals with spirits, get out of my sight!"'
 		return await ewutils.send_message(cmd.client, cmd.message.channel, ewutils.formatMessage(cmd.message.author, response))	
 	
 	food_items = ewitem.inventory(id_user = user_data.id_user, id_server = user_data.id_server,item_type_filter = ewcfg.it_food)
