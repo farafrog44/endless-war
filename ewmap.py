@@ -1924,16 +1924,16 @@ async def loop(cmd):
 		response = "You need to be on the edge of the map to !loop through it. Try a district bordering an outskirt, the ferry, or Slime's End Cliffs."
 		return await ewutils.send_message(cmd.client, cmd.message.channel, ewutils.formatMessage(cmd.message.author, response))
 	else:
-            mutation_data = EwMutation(id_mutation=ewcfg.mutation_id_landlocked, id_user=cmd.message.author.id, id_server=cmd.message.guild.id)
-          
-	    if len(mutation_data.data) > 0:
-                time_lastuse = int(mutation_data.data)
-            else:
-	       time_lastuse = 0
-	
-	    if time_lastuse + 180*60 > time_now:
-		response = "You can't do that again yet. Try again in about {} minute(s)".format(math.ceil((time_lastuse + 180*60 - time_now)/60))
-		return await ewutils.send_message(cmd.client, cmd.message.channel, ewutils.formatMessage(cmd.message.author, response))
+        mutation_data = EwMutation(id_mutation=ewcfg.mutation_id_landlocked, id_user=cmd.message.author.id, id_server=cmd.message.guild.id)
+
+        if len(mutation_data.data) > 0:
+            time_lastuse = int(mutation_data.data)
+        else:
+            time_lastuse = 0
+
+        if time_lastuse + 180*60 > time_now:
+            response = "You can't do that again yet. Try again in about {} minute(s)".format(math.ceil((time_lastuse + 180*60 - time_now)/60))
+            return await ewutils.send_message(cmd.client, cmd.message.channel, ewutils.formatMessage(cmd.message.author, response))
 		
 		global move_counter
 		move_counter += 1
