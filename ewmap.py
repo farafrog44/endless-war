@@ -1942,6 +1942,11 @@ async def loop(cmd):
 		await asyncio.sleep(60)
 
 		if move_current == ewutils.moves_active[cmd.message.author.id]:
+			mutation_data = EwMutation(id_mutation=ewcfg.mutation_id_landlocked, id_user=cmd.message.author.id, id_server=cmd.message.guild.id)
+			
+			mutation_data.data = str(time_now)
+			mutation_data.persist()
+			
 			await ewutils.send_message(cmd.client, cmd.message.channel, ewutils.formatMessage(cmd.message.author, "**VOIIII-**".format(dest_poi_obj.str_name)))
 
 			user_data = EwUser(member=cmd.message.author)
