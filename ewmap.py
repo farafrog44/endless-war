@@ -1946,8 +1946,6 @@ async def loop(cmd):
 			
 			mutation_data.data = str(time_now)
 			mutation_data.persist()
-			
-			await ewutils.send_message(cmd.client, cmd.message.channel, ewutils.formatMessage(cmd.message.author, "**VOIIII-**".format(dest_poi_obj.str_name)))
 
 			user_data = EwUser(member=cmd.message.author)
 			ewutils.moves_active[cmd.message.author.id] = 0
@@ -1956,6 +1954,7 @@ async def loop(cmd):
 			ewutils.end_trade(user_data.id_user)
 			user_data.poi = dest_poi
 			user_data.persist()
+			await ewutils.send_message(cmd.client, cmd.message.channel, ewutils.formatMessage(cmd.message.author, "**VOIIII-**".format(dest_poi_obj.str_name)))
 			await ewrolemgr.updateRoles(client=cmd.client, member=cmd.message.author)
 			await user_data.move_inhabitants(id_poi=dest_poi_obj.id_poi)
 			await ewutils.activate_trap_items(dest_poi_obj.id_poi, user_data.id_server, user_data.id_user)
