@@ -1515,9 +1515,8 @@ smelting_recipe_list = [
 			'magnet'
 		],
 		ingredients={
-			ewcfg.item_id_tincan: 2,  # metal dust
-			ewcfg.item_id_slimepoudrin: 5,  # lifeforce
-			ewcfg.item_id_string: 1,  # Scarf/tether
+			ewcfg.item_id_tincan: 1,  # metal dust
+			ewcfg.item_id_slimepoudrin: 2,  # lifeforce
 		},
 		products=["ferroslimeoid"]
 	)
