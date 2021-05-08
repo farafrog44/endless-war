@@ -154,7 +154,7 @@ def gen_score_text(ew_id):
 		response = "{}'s power is beyond your understanding.".format(ew_id.display_name)
 	else:
 		# return somebody's score
-		response = "{} currently has {:,} slime{}.".format(ew_id.display_name, user_data.slimes, (" and {} slime poudrin{}".format(poudrin_amount, ("" if poudrin_amount == 1 else "s")) if poudrin_amount > 0 else ""))
+		response = "{} currently has {:,} {}{}.".format(ew_id.display_name, user_data.slimes, "slime" if skune is False else "skune", (" and {} {} poudrin{}".format(poudrin_amount, "slime" if skune is False else "skune" ("" if poudrin_amount == 1 else "s")) if poudrin_amount > 0 else ""))
 
 	return response
 
@@ -181,7 +181,7 @@ async def score(cmd):
 		poudrin_amount = ewitem.find_poudrin(id_user = cmd.message.author.id, id_server = cmd.guild.id)
 
 		# return my score
-		response = "You currently have {:,} {}{}.".format(user_data.slimes, "slime" if skune is False else "skune", (" and {} slime poudrin{}".format(poudrin_amount, ("" if poudrin_amount == 1 else "s")) if poudrin_amount > 0 else ""))
+		response = "You currently have {:,} {}{}.".format(user_data.slimes, "slime" if skune is False else "skune", (" and {} {} poudrin{}".format(poudrin_amount, "slime" if skune is False else "skune", ("" if poudrin_amount == 1 else "s")) if poudrin_amount > 0 else ""))
 	
 	# other user slime check
 	else:
